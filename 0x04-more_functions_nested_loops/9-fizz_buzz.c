@@ -1,31 +1,33 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle, followed by a new line
- * @size: size of the triangle
+ * main - main function
+ *
+ * Return: a number
  */
-void print_triangle(int size)
+int main(void)
 {
-	if (size <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int i;
 
-		for (i = 1; i <= size; i++)
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
 		{
-			for (j = i; j < size; j++)
+			if (i % 3 == 0)
 			{
-				_putchar(' ');
+				printf("Fizz"
 			}
-
-			for (j = 1; j <= i; j++)
+			if (i % 5 == 0)
 			{
-				_putchar('#');
+				printf("Buzz");
 			}
-
-			_putchar('\n');
+		} else
+		{
+			printf("%d", i);
 		}
+		if (i != 100)
+			printf(" ");
 	}
+	printf("\n");
+	return (0);
 }

@@ -10,20 +10,30 @@
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	/*variables*/
+	int n, j;
 
-	i = 0;
-	j = 0;
-	while (i < 64)
+
+
+	n = 0;
+
+	while (n < 8) /*repeat number*/
+
 	{
-		if (i % 8 == 0 && i != 0)
+
+		j = 0;
+
+		while (j < 8)
+
 		{
-			j = i;
-			_putchar('\n');
+
+			_putchar (a[n][j]);
+
+			j++;
+
 		}
 
-		_putchar(a[i / 8][i - j]);
-		i++;
+		_putchar ('\n'); /*print new line*/
+		n++;
 	}
-	_putchar('\n');
 }
